@@ -33,5 +33,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(() => {return {};}, mapDispatchToProps)(NewContact);
-
-//aa.aa@aa.com

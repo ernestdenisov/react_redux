@@ -15,6 +15,8 @@ const taskReducer = (state = [], action) => {
             break;
         case 'EDIT_TASK':            
             break;
+        default :
+            break;
     }
     return state;
 },

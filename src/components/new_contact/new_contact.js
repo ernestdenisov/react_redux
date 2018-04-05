@@ -2,14 +2,7 @@ import React from 'react';
 import NewContactHeader from '../header/new_contact_header';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {addTask} from '../../actions/';
 import {addContact} from '../../actions/';
-
-
-const new_contact_styles = {
-    visibility : 'hidden',
-    backgroundColor : 'red'
-}
 
 const pattern = /^\w+([.-]\w+)*@\w+([.-]\w)*\.\w{2,4}$/;
 
@@ -49,27 +42,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(() => {}, mapDispatchToProps)(NewContact);
-
-/*
-
-class TaskBar extends React.Component{
-
-    render(){
-        return (
-            <div>
-                <input type="text" ref="task" placeholder="hi"/>
-                <button onClick={() => {
-                    this.props.addTask(this.refs.task.value);                    
-                    this.refs.task.value = '';
-                }}>+</button>                
-            </div>
-        )
-    }
-}
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({addTask}, dispatch);
-}
-
-export default connect(() => {}, mapDispatchToProps)(TaskBar);
-*/

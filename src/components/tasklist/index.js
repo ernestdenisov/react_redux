@@ -9,7 +9,7 @@ class TaskList extends React.Component{
             <table>
                 <tbody>
                     {this.props.user_names.map((user_name, index) => {
-                        if (index % 2 == 0) {
+                        if (index % 2 === 0) {
                             return <div style={{
                                 backgroundColor : '#eeeeee',
                                 width : '400px'
