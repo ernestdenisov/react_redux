@@ -6,24 +6,12 @@ import {createStore} from 'redux';
 import reducers from './reducers/';
 
 let store = createStore(reducers);
-let root = document.getElementById('root');
-
-const rootStyles = {
-    width : '400px',
-    margin : '10px',
-    padding : '10px',
-    border : '1px solid black',
-    borderRadius : '5px'
-}
-for (const style in rootStyles) {
-    root.style[style] = rootStyles[style];
-}
 
 ReactDOM.render(
 	<Provider store={store}>
 	<App />
 	</Provider>,
-	root
+	document.getElementById('root')
 );
 
 // import React from 'react';

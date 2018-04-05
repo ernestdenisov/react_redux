@@ -8,7 +8,15 @@ class TaskList extends React.Component{
         return(
             <table>
                 <tbody>
-                    {this.props.tasks.map((task, index) => <Task key={index} task={task} />)}
+                    {this.props.user_names.map((user_name, index) => {
+                        if (index % 2 == 0) {
+                            return <div style={{
+                                backgroundColor : '#eeeeee',
+                                width : '400px'
+                            }}><Task id={index} user_name={user_name} /></div>
+                        }
+                        return <div><Task id={index} user_name={user_name} /></div>
+                })}
                 </tbody>
             </table>
         )
@@ -17,7 +25,7 @@ class TaskList extends React.Component{
 
 function mapStateToProps(state) {
     return {
-        tasks : state.tasks
+        user_names : state.user_names
     }
 }
 
