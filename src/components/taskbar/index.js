@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {addTask} from '../../actions/';
+import '../App.css';
 
 class TaskBar extends React.Component{
 
